@@ -1,0 +1,88 @@
+html{
+    background: linear-gradient(white, papayawhip);
+}
+header{
+    border: thick double #32a1ce;
+    background : linear-gradient(lightskyblue,white);
+    text-align: center;
+}
+nav{
+    display: flex;
+    text-align: center;
+    padding : 20px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+ul{
+    list-style: none;
+}
+h3{
+    color : indigo;
+}
+h4{
+    color : blueviolet;
+}
+footer{
+    border: thick double #32a1ce;
+    padding : 10px 10px 20px 10px;
+    margin: 20px;
+    text-align: center;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+hr{
+    align-content: center;
+    width: 75%;
+}
+.center{
+    text-align: center;
+}
+.list-align {
+    text-align: left;
+}
+.codage{
+    list-style: none;
+    padding-top: 0;
+    padding-left: 37%;
+}
+li{
+    text-align: left;
+}
+.image{
+    max-height: 300px;
+    max-width: 100%;
+}
+.video{
+    max-height: 300px;
+    max-width: 100%;
+}
+
+@media screen and (max-device-width: 400px){
+    section{
+        flex-direction: column;
+        align-items: normal;
+    }
+    nav{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .align-items{
+        align-items: center;
+    }
+    .codage{
+        padding-left: 20%;
+    }
+}

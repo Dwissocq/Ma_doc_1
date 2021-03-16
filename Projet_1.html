@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation Projet Ticket de Caisse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Projet Ticket de caisse</h1>
+</header>
+<nav class="menu">
+    <ul>
+        <li><a href="#Problématique">La Problématique</a></li>
+        <li><a href="#Conception">La Conception</a></li>
+        <li><a href="#Codage">Le Codage</a></li>
+        <li><a href="#Résultat">Le Résultat</a></li>
+        <li><a href="#Equipe">L'Equipe</a></li>
+    </ul>
+    <img src="simplonco.png" height="127" width="127" ">
+</nav>
+<main>
+    <hr>
+    <section>
+        <article>
+            <h3 id="Problématique">Quel était le problème ?</h3>
+            <div><p>Mon ami Xavier le cuisinier avait cassé sa caisse enregistreuse.</p></div>
+            <p>Il me fallait l'aider en lui créant un programme permettant à ses serveurs de :</p>
+            <ul>
+                <li>- Ecrire ce qu'a consommé le client</li>
+                <li>- Editer un joli ticket de caisse pour ensuite l'imprimer</li>
+            </ul>
+            <br>
+        </article>
+        <article>
+            <img src="Caisse.png" height="200">
+            <br>
+        </article>
+    </section>
+    <hr>
+    <section class="reverse">
+        <article>
+            <img src="Conception.jpg" height="200"/>
+            <br>
+        </article>
+        <article>
+            <h3 id="Conception">Comment s'est déroulée la conception ?</h3>
+            <p>Il m'a fallu réfléchir dans un premier temps à ce dont j'avais besoin.</p>
+            <ul>
+                <li>Récupérer des données, en l'occurence :</li>
+                <ul>
+                    <li>- Le type de plat</li>
+                    <li>- La quantité</li>
+                    <li>- Le prix unitaire du plat</li>
+                </ul>
+                <br>
+                <li>Afficher une facture</li>
+                <li>Afficher les données récupérées et les mettre en forme</li>
+                <li>Calculer et afficher les prix de chaque plat</li>
+                <br>
+                <li>Calculer et afficher le prix total :</li>
+                <ul>
+                    <li>- Avant TVA</li>
+                    <li>- Après TVA</li>
+                </ul>
+            </ul>
+            <br>
+        </article>
+    </section>
+    <hr>
+    <section>
+        <article>
+            <h3 id="Codage">Quid du codage ?</h3>
+            <p>Le codage s'est découpé en plusieurs étapes :</p>
+            <h4>Création de tableaux :</h4>
+            <p>Déclaration de 3 tableaux</p>
+            <ul class="codage">
+                <li>String [] articles pour les plats</li>
+                <li>int [] quantities pour les quantités</li>
+                <li>double [] prices pour les prix unitaires</li>
+            </ul>
+            <h4> Création d'une boucle pour l'enregistrement des données</h4>
+            <p>Le choix s'est porté sur une boucle "do while" afin de poser une première question ("Quelle est la
+                commande n°1").
+                <br>La boucle continue tant que la réponse n'est pas un champ vide.
+                <br>Enfin un compteur tourne avec la boucle pour compter les plats.</p>
+            <h4>Affichage du ticket de caisse</h4>
+            <p>Cette fois-ci c'est une boucle while que j'utilise tant que mon tableau de plats n'est pas vide.</p>
+            <ul>
+                <li>while (articles[counter]!=null){</li>
+                <ul>
+                    <li>double linePrices = quantities[counter]*prices[counter];</li>
+                    <li>totalPrice = totalPrice + linePrices;</li>
+                    <li>System.out.printf("%2s x %10s (%6.2f€) %10.2f€, quantities[counter],</li>
+                    <ul>
+                        <li>articles[counter], prices[counter], linePrices);</li>
+                    </ul>
+                    <li>System.out.println();</li>
+                    <li>counter++;</li>
+                </ul>
+                <li>}</li>
+            </ul>
+            <p>La variable double "linePrices" me permet d'enregsitrer les plats par leurs quantités,
+                <br>tandis que totalPrice les incrémente.</p>
+            <p>Il ne me reste plus qu'à afficher la facture totale (sans tva puis avec tva).
+                <br>J'ai choisi un System.out.printf pour formater mes données.</p>
+        </article>
+        <article>
+            <div><img class="image" src="Codage.jpg" height=auto/>
+                <br></div>
+        </article>
+    </section>
+    <hr>
+    <section>
+        <article class="center">
+            <h3 id="Résultat">Voilà le résultat</h3>
+            <video class="video" controls width=auto>
+                <source src="Résultat.mp4" type="video/mp4">
+            </video>
+            <br>
+            <br>
+        </article>
+    </section>
+    <hr>
+    <section>
+        <article>
+            <h3 id="Equipe">L'équipe de développeurs !</h3>
+            <a href="https://www.linkedin.com/in/david-wissocq/">Lien vers l'équipe !</a>
+        </article>
+    </section>
+</main>
+<footer>
+    <h3>Les contacts</h3>
+    Pour toute question, veuillez contacter <a href="mailto:dwissocq@gmail.com">David Wissocq</a> !
+
+    <p></p>
+</footer>
+</body>
+</html>
